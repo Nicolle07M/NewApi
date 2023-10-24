@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
- 
+using NewApi.Models;
+
 namespace NewApi.Data
 {
     public class ApplicationDbContext : DbContext
@@ -9,5 +10,12 @@ namespace NewApi.Data
             {
 
             }
+
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<Product> Products { get; set; }
+
     }
 }
